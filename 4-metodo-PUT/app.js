@@ -5,15 +5,6 @@ const app = express()
 app.use(express.json())
 
 
-app.post("/contato", (req, res)=>{
-  var nome = req.body.nome
-  var {email} = req.body
-  //Implementar a regra para salvar no banc de dados 
-  return res.json({
-    nome, 
-    email
-  })
-})
 
 
 app.listen(3000, () => {
