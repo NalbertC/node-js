@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require('express')
 
-const app = express();
+const app = express()
 
 app.use(express.json())
 
@@ -9,26 +9,25 @@ app.get("/contatos/:id", (req, res) => {
   const {sit} = req.query;  //Variável
   return res.json({
     id, 
-    Nome: "Nalberth", 
+    nome: "Nalberth", 
     email: "nalberthcastro1510@gmail.com",
     sit
-  });
-});
-
-app.post("/contato", (req, res)=>{
-  return res.json({
-    Nome: "Nalberth", 
-    email: "nalberthcastro1510@gmail.com"
-  });
-});
-
-app.get("/list", (req, res) => {
-  res.json({"success": true})
+  })
 })
 
+app.post("/contato", (req, res)=>{
+  var nome = req.body.nome
+  var email = req.body.email
+  return res.json({
+    nome, 
+    email
+  })
+})
+
+
 app.listen(3000, () => {
-    console.log("Servidor iniciado com sucesso na porta 3000: http://localhost:3000");
-});
+    console.log("Servidor iniciado com sucesso na porta 3000: http://localhost:3000")
+})
 
 
 

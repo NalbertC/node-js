@@ -8,8 +8,8 @@ app.get("/", (req, res) => {
 
 /*app.get("/contatos", (req, res) => {
   return res.json({
-    "Nome:" : "Nalberth",
-    "e-mail": "nalberthcastro1510@gmail.com"
+    "nome:" : "Nalberth",
+    "email": "nalberthcastro1510@gmail.com"
   });
 });*/
 
@@ -27,7 +27,7 @@ app.get("/contatos/:id", (req, res) => {
   const {sit} = req.query;  //Variável
   return res.json({
     id, 
-    Nome: "Nalberth", 
+    nome: "Nalberth", 
     email: "nalberthcastro1510@gmail.com",
     sit
   });
